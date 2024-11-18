@@ -2,7 +2,7 @@ import Header from '../components/Header/header'
 
 import React from 'react'
 
-export default function DefaultLayout({children}) {
+export default function HeaderOnly({children}) {
   return (
     <div>
         <Header />
