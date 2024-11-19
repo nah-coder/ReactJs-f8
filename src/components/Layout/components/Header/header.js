@@ -20,7 +20,7 @@ export default function Header() {
   const [searchResult, setSeachResult] = useState([])
   useEffect(()=>{
     setTimeout(()=>{
-      setSeachResult([])
+      setSeachResult([1])
     },0)
   },[])
   return (
@@ -30,8 +30,8 @@ export default function Header() {
           <img src={images.logo} alt="TikTok"></img>
         </div>
         <Tippy
-        interactive
-        visible={searchResult.length>0}
+        interactive 
+        // visible={searchResult.length>0}
           render={(attrs) => (
             
               <div className={cx("search-result")} tabIndex="-1" {...attrs}>
@@ -60,10 +60,9 @@ export default function Header() {
             </button>
           </div>
         </Tippy>
-        <div className={cx('action')}>
-          <Button>
-            Login
-          </Button>
+        <div className={cx("action")}>
+          <Button text>Upload</Button>
+          <Button primary>Login</Button>
         </div>
       </div>
     </header>
